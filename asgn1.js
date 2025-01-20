@@ -553,6 +553,8 @@ function click(ev) {
   point.color = g_selectedColor.slice();
   point.size = g_selected_size;
   point.segments = g_selectedSeg;
+  point.width = g_selected_width;
+  point.height = g_selected_height;
   g_shapesList.push(point);
   // Store the coordinates to g_points array
  // g_points.push([x, y]);
@@ -616,6 +618,8 @@ const RECTANGLE = 3;
 let g_selectedColor = [0.0,0.0,0.0,1.0];
 let g_selected_size = 5;
 let g_selectedSeg = 10; 
+let g_selected_width = 0.2;
+let g_selected_height = 0.1; 
 let g_selectedType = POINT;
 function userInterface(){
 
@@ -632,6 +636,10 @@ function userInterface(){
 
   document.getElementById("size_slide").addEventListener('mouseup', function(){g_selected_size = this.value;});
   document.getElementById("circle_slide").addEventListener('mouseup', function(){g_selectedSeg = this.value;});
+
+
+  document.getElementById("width_slide").addEventListener('mouseup', function(){g_selected_width = this.value;});
+  document.getElementById("height_slide").addEventListener('mouseup', function(){g_selected_height = this.value;});
 
   document.getElementById("walter_button").onclick = drawWalter;
 
