@@ -1,5 +1,3 @@
-// ColoredPoint.js (c) 2012 matsuda
-// Vertex shader program
 var VSHADER_SOURCE =`
   attribute vec4 a_Position;
   uniform float u_Size; 
@@ -684,6 +682,9 @@ function main() {
   // Specify the color for clearing <canvas>
   //gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
+  // Clear <canvas>
+  //gl.clear(gl.COLOR_BUFFER_BIT);
+//}
   // Clear <canvas>
   //gl.clear(gl.COLOR_BUFFER_BIT);
 //}
